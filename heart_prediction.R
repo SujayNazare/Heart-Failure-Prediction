@@ -1,8 +1,9 @@
+## removing all the previous records from the workspace.
 rm(list = ls())
 ls()
 
+## setting the directory and checking the same.
 getwd()
-
 
 ## 1. importing the csv files.
 library(readr)
@@ -13,7 +14,7 @@ str(heart_dis)
 
 ## result #########################################################
 'data.frame':	918 obs. of  12 variables:
-  $ Age           : int  40 49 37 48 54 39 45 54 37 48 ...
+$ Age           : int  40 49 37 48 54 39 45 54 37 48 ...
 $ Sex           : chr  "M" "F" "M" "F" ...
 $ ChestPainType : chr  "ATA" "NAP" "ATA" "ASY" ...
 $ RestingBP     : int  140 160 130 138 150 120 130 110 140 120 ...
