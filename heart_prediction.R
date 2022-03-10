@@ -47,7 +47,7 @@ Age RestingBP Cholesterol FastingBS MaxHR Oldpeak HeartDisease
 library(ggplot2)
 
 df_heart %>% ggplot(mapping = aes(Age, MaxHR, size=Cholesterol, alpha =0.5)) + geom_point() +
-  geom_smooth(method = lm, se=FALSE) 
+  geom_smooth(method = lm, se=FALSE) + labs(title = 'Maximum Heart Rate vs Age', subtitle = 'With linear regression')
 
 ## 3. transformn HeartDisease from "0"/"1" to "Fail"/"Ok".
 df_heart$HeartDisease <- factor(ifelse(df_heart$HeartDisease == 0, "Fail", "Ok" ))
